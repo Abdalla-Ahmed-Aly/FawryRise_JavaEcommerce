@@ -1,18 +1,68 @@
-## Getting Started
+🚀 How It Works
+This Java console-based e-commerce simulation models a simplified shopping and checkout process. The system demonstrates core object-oriented principles including encapsulation, abstraction, and polymorphism.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+🛒 Features:
+Product Management
+Multiple product types including perishable (e.g., Cheese, Biscuits) and non-perishable (e.g., TV, ScratchCard).
+Products may or may not be shippable or expirable.
 
-## Folder Structure
+Cart Operations
+Customers can add items to the cart, and quantities are validated against stock availability.
 
-The workspace contains two folders by default, where:
+Checkout Process
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Verifies product expiration and stock quantity
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Calculates the subtotal of all cart items
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Computes shipping costs based on total package weight
 
-## Dependency Management
+Deducts the total amount from the customer's balance
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Reduces the product quantities accordingly
+
+Shipping Logic
+
+Shippable items are listed with quantities and weights
+
+Shipping cost is calculated as:
+Shipping Cost = Total Weight × 30 LE
+
+📦 Sample Console Output:
+markdown
+Copy
+Edit
+** Shipment notice **
+2x Cheese        400g
+1x Biscuits      600g
+Total package weight 1.0kg
+
+** Checkout receipt **
+2x Cheese         200
+1x Biscuits       150
+----------------------
+Subtotal          350
+Shipping           30
+Amount            380
+🧪 Technologies Used:
+Java SE
+
+OOP Principles (Abstraction, Encapsulation, Inheritance, Polymorphism)
+
+Interfaces (e.g., Shippable, Expirable)
+
+Console-based simulation (no GUI)
+
+▶️ How to Run:
+Compile the project:
+
+bash
+Copy
+Edit
+javac Main.java
+Run the application:
+
+bash
+Copy
+Edit
+java Main
